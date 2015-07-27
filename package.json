@@ -1,0 +1,53 @@
+{
+  "name": "copy-canvas",
+  "description": "a more symantic way to duplicate an html5 canvas",
+  "version": "0.0.0",
+  "author": {
+    "name": "Will Hoag",
+    "email": "dev@willhoag.com",
+    "url": "www.willhoag.com"
+  },
+  "bugs": {
+    "url": "https://github.com/willhoag/copy-canvas/issues"
+  },
+  "dependencies": {
+    "create-canvas": "^1.0.0",
+    "draw-to-canvas": "^0.0.4"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.0",
+    "phantomjs": "^1.9.17",
+    "standard": "^4.5.3",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.1",
+    "tape-run": "^1.0.0"
+  },
+  "homepage": "git://github.com/willhoag/copy-canvas.git",
+  "keywords": [
+    "canvas",
+    "context",
+    "html5",
+    "copy",
+    "duplicate",
+    "clone"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "devhoag",
+      "email": "dev@willhoag.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/willhoag/copy-canvas.git"
+  },
+  "scripts": {
+    "build": "babel index.es6 > index.js",
+    "prepublish": "npm test && npm run build",
+    "test": "standard index.es6 && browserify -t babelify --extension .es6 test.es6 | tape-run | tap-spec"
+  }
+}
