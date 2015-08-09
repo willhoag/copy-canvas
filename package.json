@@ -1,7 +1,7 @@
 {
   "name": "copy-canvas",
   "description": "a more symantic way to duplicate an html5 canvas",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": {
     "name": "Will Hoag",
     "email": "dev@willhoag.com",
